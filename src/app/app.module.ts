@@ -1,24 +1,32 @@
-import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatDialogModule } from '@angular/material/dialog'; 
+import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AboutComponent } from './about/about.component';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ButtonComponent } from './button/button.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ButtonComponent } from './button/button.component';
+import { ServicesComponent } from './services/services.component';
+import { DialogComponent } from './home/dialog/dialog.component';
 
 @NgModule({
   declarations: [
+    AboutComponent,
     AppComponent,
+    ButtonComponent,
+    DialogComponent,
     HeaderComponent,
     HomeComponent,
-    AboutComponent,
-    ButtonComponent
+    ServicesComponent
   ],
   imports: [
+    AppRoutingModule,
+    BrowserAnimationsModule,
     BrowserModule,
-    AppRoutingModule
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
