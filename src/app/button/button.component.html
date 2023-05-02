@@ -1,16 +1,15 @@
 <ng-container *ngIf="href; else noLink">
-    <a [href]="href" class="btn">
-        <ng-container [ngTemplateOutlet]="content"></ng-container>
-    </a>
+  <a [href]="href" class="btn">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </a>
 </ng-container>
 
 <ng-template #noLink>
-    <a class="btn">
-        <ng-container [ngTemplateOutlet]="content"></ng-container>
-    </a>
+  <a class="btn">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </a>
 </ng-template>
 
 <ng-template #content>
-    <ng-content></ng-content>
+  <ng-content></ng-content>
 </ng-template>
-

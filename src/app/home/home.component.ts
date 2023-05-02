@@ -9,8 +9,7 @@ import { DialogComponent } from './dialog/dialog.component';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
-  public constructor(public dialog: MatDialog) { }
+  public constructor(public dialog: MatDialog) {}
 
   public openDialog() {
     this.dialog.open(DialogComponent);

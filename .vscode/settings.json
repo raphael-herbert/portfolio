@@ -1,0 +1,18 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.fontFamily": "\"Fira Code\"",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSaveMode": "file",
+  "eslint.format.enable": true,
+  "prettier.configPath": "D:\\Dev\\portfolio\\.prettierrc",
+  "prettier.requireConfig": true,
+  "eslint.codeActionsOnSave.mode": "problems",
+  "files.insertFinalNewline": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": { "source.fixAll": true }
+  }
+}

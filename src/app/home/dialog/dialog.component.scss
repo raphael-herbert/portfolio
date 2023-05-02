@@ -1,16 +1,16 @@
 .content {
-    background: var(--bg-color);
-    border: .2rem solid var(--main-color);
+  background: var(--bg-color);
+  border: 0.2rem solid var(--main-color);
 }
 
 .btn {
-    display: flex;
-    margin-top: 2rem;
-    gap: 2rem;
-    justify-content: center;
+  display: flex;
+  margin-top: 2rem;
+  gap: 2rem;
+  justify-content: center;
 }
 
 p {
-    font-size: 2rem;
-    color: var(--text-color)
+  font-size: 2rem;
+  color: var(--text-color);
 }
