@@ -1,0 +1,41 @@
+<section class="contact">
+    <h2 class="heading">Contact <span>Me !</span></h2>
+
+    <div class="contact-container">
+        <form [formGroup]="form" action="#">
+            <div class="input-box">
+                <input
+                    formControlName="name"
+                    type="text"
+                    placeholder="Full Name" />
+                <input
+                    formControlName="email"
+                    type="email"
+                    placeholder="Email Address" />
+            </div>
+
+            <div class="input-box">
+                <input
+                    formControlName="mobile"
+                    type="text"
+                    placeholder="Mobile Number" />
+                <input
+                    formControlName="subject"
+                    type="text"
+                    placeholder="Email Subject" />
+            </div>
+            <textarea
+                formControlName="message"
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Your Message"></textarea>
+            <app-button (click)="sendEmail()">Send Message</app-button>
+        </form>
+    </div>
+</section>
+<app-footer></app-footer>
+
+
+
