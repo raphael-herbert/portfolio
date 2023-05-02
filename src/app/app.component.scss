@@ -1,0 +1,15 @@
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: thin;
+}
+
+.scroll-area {
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+    min-height: 100vh;
+}

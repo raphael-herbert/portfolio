@@ -11,24 +11,26 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { DialogComponent } from './home/dialog/dialog.component';
+import { ExperiencesComponent } from './experiences/experiences.component';
 
 @NgModule({
-  declarations: [
-    AboutComponent,
-    AppComponent,
-    ButtonComponent,
-    DialogComponent,
-    HeaderComponent,
-    HomeComponent,
-    ServicesComponent
-  ],
-  imports: [
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    BrowserModule,
-    MatDialogModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AboutComponent,
+        AppComponent,
+        ButtonComponent,
+        DialogComponent,
+        HeaderComponent,
+        HomeComponent,
+        ServicesComponent,
+        ExperiencesComponent
+    ],
+    imports: [
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        BrowserModule,
+        MatDialogModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}
