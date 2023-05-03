@@ -1,5 +1,6 @@
 @use '@angular/material' as mat;
 @include mat.core();
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap');
 
 $portfolio-primary: mat.define-palette(mat.$indigo-palette);
 $portfolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
@@ -24,7 +25,8 @@ $portfolio-theme: mat.define-light-theme(
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    // font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 :root {

@@ -48,3 +48,16 @@
         }
     }
 }
+
+::ng-deep .snackbar {
+    color: white !important;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute !important;
+    bottom: 5rem !important;
+    border-radius: 500px !important;
+    ::ng-deep .mat-mdc-snack-bar-action {
+        color: var(--main-color) !important;
+        font-weight: bold;
+    }
+}

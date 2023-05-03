@@ -1,22 +1,38 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
     providedIn: 'root'
 })
 export class EmailService {
-    private url = '';
+    private url = 'https://formspree.io/f/mlekzlap';
 
     constructor(private http: HttpClient) {}
 
-    public SendEmail(email: string, subject: string, message: string) {
+    public SendEmail(
+        name: string,
+        mobile: string,
+        email: string,
+        subject: string,
+        message: string
+    ) {
+        const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
         return this.http.post(
-            'https://mailthis.to/raphael.herbert@outlook.fr',
+            this.url,
             {
-                email: email,
-                _subject: subject,
-                message: message
-            }
+                name: 'raphael.herbert@outlook.fr',
+                replyto: email,
+                message:
+                    '/ name : ' +
+                    name +
+                    'mobile : ' +
+                    mobile +
+                    ' / subject : ' +
+                    subject +
+                    ' / message : ' +
+                    message
+            },
+            { headers: headers }
         );
     }
 }

@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 
 import { EmailService } from './email.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'app-contact',
@@ -22,18 +23,27 @@ export class ContactComponent {
         message: new FormControl('', [Validators.required])
     });
 
-    constructor(private fb: FormBuilder, private email: EmailService) {}
+    constructor(
+        private fb: FormBuilder,
+        private email: EmailService,
+        private snackBar: MatSnackBar
+    ) {}
 
     public sendEmail() {
+        const mobile = this.form.value.mobile;
+        const name = this.form.value.name;
         const email = this.form.value.email;
         const subject = this.form.value.subject;
         const message = this.form.value.message;
-        console.log(email);
-        this.email.SendEmail(email, subject, message).subscribe(response => {
-            if (response != null) {
-                console.log('helo');
-                location.href = 'https://mailthis.to/confirm';
-            }
-        });
+        this.email.SendEmail(name, mobile, email, subject, message).subscribe(
+            () =>
+                this.snackBar.open(
+                    "Thanks ! I'll reply to you as soon as possible !", 'OK', { panelClass: 'snackbar' }
+                ),
+            () =>
+                this.snackBar.open(
+                    'An error occured ! Please contact me at "raphael.herbert@outlook.fr"', 'OK', { panelClass: 'snackbar' }
+                )
+        );
     }
 }

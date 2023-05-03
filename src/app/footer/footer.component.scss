@@ -28,3 +28,11 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .footer {
+        text-align: center;
+        flex-direction: column-reverse;
+        gap: 1em;
+    }
+}
