@@ -25,7 +25,7 @@ export class EmailService {
                 message:
                     '/ name : ' +
                     name +
-                    'mobile : ' +
+                    ' / mobile : ' +
                     mobile +
                     ' / subject : ' +
                     subject +

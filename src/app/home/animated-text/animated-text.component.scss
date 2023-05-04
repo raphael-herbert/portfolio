@@ -1,0 +1,47 @@
+.text-carousel {
+    height: 40px;
+
+    .change-text {
+        height: 40px;
+        overflow: hidden;
+
+        .text-content {
+            position: relative;
+            animation: slideUp 8s ease-in-out infinite;
+        }
+
+        .text {
+            display: block;
+            font-weight: 900;
+            color: var(--main-color);
+            letter-spacing: 1px;
+        }
+    }
+}
+
+@keyframes slideUp {
+    0%,
+    20% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    25%,
+    45% {
+        -webkit-transform: translateY(-20%);
+        transform: translateY(-20%);
+    }
+    50%,
+    70% {
+        -webkit-transform: translateY(-40%);
+        transform: translateY(-40%);
+    }
+    75%,
+    95% {
+        -webkit-transform: translateY(-60%);
+        transform: translateY(-60%);
+    }
+    100% {
+        -webkit-transform: translateY(-80%);
+        transform: translateY(-80%);
+    }
+}

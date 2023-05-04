@@ -61,3 +61,20 @@
         font-weight: bold;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .contact {
+        flex-direction: column-reverse;
+
+        .contact-container {
+            form .input-box {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

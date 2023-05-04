@@ -1,12 +1,16 @@
-// .scroll-container {
-//     height: 100vh;
-//     overflow-y: scroll;
-//     scroll-snap-type: y mandatory;
-//     scrollbar-width: thin;
-// }
+app-spinner {
+    transform: translateY(-5%);
+    transition: 1s ease-in;
+}
 
-// .scroll-area {
-//     display: flex;
-//     scroll-snap-align: center;
-//     min-height: 100vh;
-// }
+.hide {
+    display: none;
+}
+
+.animate {
+    transform: translateY(-150%);
+}
+
+.scroll-container {
+    position: relative;
+}

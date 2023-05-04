@@ -8,6 +8,7 @@ import {
 
 import { EmailService } from './email.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { finalize } from 'rxjs';
 
 @Component({
     selector: 'app-contact',
@@ -35,15 +36,22 @@ export class ContactComponent {
         const email = this.form.value.email;
         const subject = this.form.value.subject;
         const message = this.form.value.message;
-        this.email.SendEmail(name, mobile, email, subject, message).subscribe(
-            () =>
-                this.snackBar.open(
-                    "Thanks ! I'll reply to you as soon as possible !", 'OK', { panelClass: 'snackbar' }
-                ),
-            () =>
-                this.snackBar.open(
-                    'An error occured ! Please contact me at "raphael.herbert@outlook.fr"', 'OK', { panelClass: 'snackbar' }
-                )
-        );
+        this.email
+            .SendEmail(name, mobile, email, subject, message)
+            .pipe(finalize(() => this.form.reset()))
+            .subscribe(
+                () =>
+                    this.snackBar.open(
+                        "Thanks ! I'll reply to you as soon as possible !",
+                        'OK',
+                        { panelClass: 'snackbar' }
+                    ),
+                () =>
+                    this.snackBar.open(
+                        'An error occured ! Please contact me at "raphael.herbert@outlook.fr"',
+                        'OK',
+                        { panelClass: 'snackbar' }
+                    )
+            );
     }
 }

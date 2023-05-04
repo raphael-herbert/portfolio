@@ -18,6 +18,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
+import { BackgroundComponent } from './background/background.component';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { AnimatedTextComponent } from './home/animated-text/animated-text.component';
+import { ThreeDComponent } from './home/three-d/three-d.component';
 
 @NgModule({
     declarations: [
@@ -30,7 +34,11 @@ import { ServicesComponent } from './services/services.component';
         FooterComponent,
         HeaderComponent,
         HomeComponent,
-        ServicesComponent
+        ServicesComponent,
+        BackgroundComponent,
+        SpinnerComponent,
+        AnimatedTextComponent,
+        ThreeDComponent
     ],
     imports: [
         AppRoutingModule,

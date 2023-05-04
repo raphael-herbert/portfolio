@@ -3,11 +3,16 @@
     top: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: var(--bg-color);
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: 0.3s ease;
+
+    &:hover {
+        background-color: var(--bg-color);
+    }
 }
 
 .logo {
@@ -34,6 +39,11 @@
 }
 
 @media screen and (max-width: 900px) {
+    .header {
+        background: var(--bg-color);
+        border-bottom: 2px solid var(--second-bg-color);
+    }
+
     .navbar {
         position: absolute;
         display: flex;
