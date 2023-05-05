@@ -58,7 +58,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 5rem;
 
         animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
         animation-delay: 2s 3s;
@@ -103,7 +102,6 @@
         }
     }
 }
-
 
 @keyframes floatImage {
     0% {

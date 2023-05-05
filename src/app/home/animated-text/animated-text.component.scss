@@ -1,8 +1,9 @@
 .text-carousel {
-    height: 40px;
+    max-height: 40px;
 
     .change-text {
-        height: 40px;
+        max-height: 40px;
+        min-height: 40px;
         overflow: hidden;
 
         .text-content {
@@ -11,10 +12,11 @@
         }
 
         .text {
-            display: block;
+            min-height: 40px;
             font-weight: 900;
             color: var(--main-color);
             letter-spacing: 1px;
+            display: flex;
         }
     }
 }
@@ -43,5 +45,23 @@
     100% {
         -webkit-transform: translateY(-80%);
         transform: translateY(-80%);
+    }
+}
+
+@media screen and (max-width: 1368px) {
+    .change-text {
+        .text {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .change-text {
+        .text {
+            font-size: 2.4rem;
+        }
     }
 }
