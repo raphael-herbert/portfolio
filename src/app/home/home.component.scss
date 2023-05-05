@@ -59,8 +59,7 @@
         align-items: center;
         justify-content: center;
 
-        animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-        animation-delay: 2s 3s;
+        animation: floatImage 4s ease-in-out infinite;
     }
 
     .home-img img {
@@ -102,6 +101,7 @@
         }
     }
 }
+
 
 @keyframes floatImage {
     0% {

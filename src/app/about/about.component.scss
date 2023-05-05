@@ -1,3 +1,18 @@
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-24px);
+    }
+
+    100% {
+        transform: translatYe(0);
+    }
+}
+
+
 .about {
     position: relative;
     display: flex;
@@ -8,9 +23,7 @@
     .about-img {
         img {
             width: 25vw;
-            animation: zoomIn 1s ease forwards,
-                floatImage 4s ease-in-out infinite;
-            animation-delay: 2s 3s;
+            animation: floatImage 4s ease-in-out infinite;
         }
     }
 
@@ -65,19 +78,5 @@
                 width: 65vw;
             }
         }
-    }
-}
-
-@keyframes floatImage {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-24px);
-    }
-
-    100% {
-        transform: translatYe(0);
     }
 }
